@@ -225,6 +225,7 @@ class BaseMultiOn:
         full_page: typing.Optional[bool] = OMIT,
         render_js: typing.Optional[bool] = OMIT,
         scroll_to_bottom: typing.Optional[bool] = OMIT,
+        mode: typing.Optional[str] = OMIT,
         include_screenshot: typing.Optional[bool] = OMIT,
         request_options: typing.Optional[RequestOptions] = None
     ) -> RetrieveOutput:
@@ -264,6 +265,9 @@ class BaseMultiOn:
         scroll_to_bottom : typing.Optional[bool]
             Flag to scroll to the bottom of the page (Default: False). If set to true, the page will be scrolled to the bottom for a maximum of 5 seconds before data is retrieved.
 
+        mode : typing.Optional[str]
+            The mode you would like to use for the session. 'standard', 'fast' or 'ludicrous'
+
         include_screenshot : typing.Optional[bool]
             Flag to include a screenshot with the response. (Default: False)
 
@@ -302,6 +306,7 @@ class BaseMultiOn:
                 "full_page": full_page,
                 "render_js": render_js,
                 "scroll_to_bottom": scroll_to_bottom,
+                "mode": mode,
                 "include_screenshot": include_screenshot,
             },
             request_options=request_options,
@@ -514,6 +519,7 @@ class AsyncBaseMultiOn:
         full_page: typing.Optional[bool] = OMIT,
         render_js: typing.Optional[bool] = OMIT,
         scroll_to_bottom: typing.Optional[bool] = OMIT,
+        mode: typing.Optional[str] = OMIT,
         include_screenshot: typing.Optional[bool] = OMIT,
         request_options: typing.Optional[RequestOptions] = None
     ) -> RetrieveOutput:
@@ -553,6 +559,9 @@ class AsyncBaseMultiOn:
         scroll_to_bottom : typing.Optional[bool]
             Flag to scroll to the bottom of the page (Default: False). If set to true, the page will be scrolled to the bottom for a maximum of 5 seconds before data is retrieved.
 
+        mode : typing.Optional[str]
+            The mode you would like to use for the session. 'standard', 'fast' or 'ludicrous'
+
         include_screenshot : typing.Optional[bool]
             Flag to include a screenshot with the response. (Default: False)
 
@@ -591,6 +600,7 @@ class AsyncBaseMultiOn:
                 "full_page": full_page,
                 "render_js": render_js,
                 "scroll_to_bottom": scroll_to_bottom,
+                "mode": mode,
                 "include_screenshot": include_screenshot,
             },
             request_options=request_options,
